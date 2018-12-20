@@ -30,6 +30,7 @@ Metadata:
           default: Networking
         Parameters:
           - VPC
+          - AvailabilityZones
           - ExternalSubnets
           - InternalSubnets
           - AssociatePublicIpAddress
@@ -55,6 +56,8 @@ Metadata:
         default: AMI Options
       AssociatePublicIpAddress:
         default: Assign public IP
+      AvailabilityZones:
+        default: Availability Zones
       BitbucketProperties:
         default: Bitbucket properties
       BitbucketVersion:
