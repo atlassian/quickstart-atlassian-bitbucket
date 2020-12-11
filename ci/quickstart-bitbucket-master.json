@@ -1,7 +1,7 @@
 [
     {
         "ParameterKey": "DeploymentAutomationBranch",
-        "ParameterValue": "feature/AZURE-211-add-sql-server-support-to-crow"
+        "ParameterValue": "feature/azure_deployments"
     },
     {
         "ParameterKey": "AvailabilityZones",
