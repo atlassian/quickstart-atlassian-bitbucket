@@ -1,5 +1,9 @@
 [
     {
+        "ParameterKey": "DeploymentAutomationBranch",
+        "ParameterValue": "feature/azure_deployments"
+    },
+    {
         "ParameterKey": "InternetFacingLoadBalancer",
         "ParameterValue": "true"
     },
