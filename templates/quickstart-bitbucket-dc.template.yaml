@@ -332,7 +332,7 @@ Parameters:
     Type: String
     Description: The deployment automation repository to use for per-node initialization. Leave this as default unless you have customizations.
   DeploymentAutomationBranch:
-    Default: "master"
+    Default: "DCD-986-use-jdk-over-installer"
     Type: String
     Description: The deployment automation repository branch to pull from.
   DeploymentAutomationPlaybook:
