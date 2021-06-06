@@ -1391,7 +1391,6 @@ Resources:
       MultiAZ: !If [StandbyMode, !Ref "AWS::NoValue", !Ref DBMultiAZ]
       SourceDBInstanceIdentifier: !If [StandbyMode, !Ref DBMaster, !Ref "AWS::NoValue"]
       StorageType: !If [DBProvisionedIops, io1, gp2]
-      PubliclyAccessible: false
       Tags:
         - Key: Name
           Value: !Sub "${AWS::StackName} Bitbucket PostgreSQL Database"
