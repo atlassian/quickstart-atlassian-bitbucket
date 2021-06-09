@@ -739,20 +739,19 @@ Resources:
                 Effect: Allow
               - Action:
                   - ec2:DescribeInstances
+                  - ec2:DescribeSnapshots
+                  - ec2:DescribeVolumes
+                  - ec2:DescribeTags
                   - es:DeletePackage
                   - es:ListElasticsearchInstanceTypeDetails
                   - es:ListDomainsForPackage
-                  - ec2:DescribeSnapshots
                   - es:DeleteElasticsearchServiceRole
                   - es:AcceptInboundCrossClusterSearchConnection
-                  - ec2:DescribeVolumes
                   - es:DeleteInboundCrossClusterSearchConnection
                   - es:DescribeOutboundCrossClusterSearchConnections
                   - es:DeleteOutboundCrossClusterSearchConnection
                   - es:DescribeReservedElasticsearchInstanceOfferings
-                  - ec2:DescribeTags
                   - es:CreateElasticsearchServiceRole
-                  - autoscaling:DescribeTags
                   - es:UpdatePackage
                   - es:RejectInboundCrossClusterSearchConnection
                   - es:GetPackageVersionHistory
@@ -765,21 +764,22 @@ Resources:
                   - es:ListElasticsearchInstanceTypes
                   - es:ListElasticsearchVersions
                   - es:DescribeElasticsearchInstanceTypeLimits
+                  - autoscaling:DescribeTags
                 Resource: "*"
                 Effect: Allow
               - Action:
                   - rds:AddTagsToResource
-                  - es:*
-                  - iam:PassRole
                   - rds:DescribeDBSnapshots
                   - rds:CreateDBSnapshot
                   - rds:RestoreDBInstanceFromDBSnapshot
-                  - autoscaling:CreateOrUpdateTags
                   - rds:CopyDBSnapshot
                   - rds:DescribeDBInstances
                   - rds:ModifyDBInstance
                   - rds:DeleteDBSnapshot
                   - rds:PromoteReadReplica
+                  - iam:PassRole
+                  - autoscaling:CreateOrUpdateTags
+                  - es:*
                 Resource:
                   - !Sub "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/*"
                   - !Sub "arn:${AWS::Partition}:es:*:${AWS::AccountId}:domain/*"
